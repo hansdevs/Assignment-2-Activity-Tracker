@@ -1,0 +1,99 @@
+/* Inspired GitHub Dark Theme by Hans*/
+:root {
+    --background-color: #0d1117;
+    --foreground-color: #161b22;
+    --text-color: #c9d1d9;
+    --border-color: #30363d;
+    --link-color: #58a6ff;
+    --hover-color: #1f6feb;
+    --button-bg: #238636;
+    --button-hover-bg: #2ea043;
+    --button-text: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 20px;
+}
+
+h1, h2, h3 {
+    color: #e6edf3;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+/* Buttons */
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Forms */
+input[type="text"], input[type="datetime-local"] {
+    background-color: var(--foreground-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+form {
+    background-color: var(--foreground-color);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    width: fit-content;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 60%;
+    background-color: var(--foreground-color);
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #21262d;
+    color: #e6edf3;
+}
+
+/* List Items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--foreground-color);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}

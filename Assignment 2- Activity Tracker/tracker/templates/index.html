@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Assignment 2: Activity Tracker - Index</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>All Activities</h1>
+    <ul>
+        {% for activity in activities %}
+        <li>
+            <strong>{{ activity.name }}</strong> -
+            Total time: {{ activity.time_spent }}
+            &nbsp;|&nbsp;
+            <a href="{% url 'activity_detail' activity_id=activity.id %}">View Details</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="{% url 'new_activity' %}">Create a New Activity</a></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>New Time Log</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Add New Time Log for: {{ activity.name }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="start_time">Start Time:</label>
+        <input type="datetime-local" name="start_time" id="start_time" required />
+
+        <label for="end_time">End Time:</label>
+        <input type="datetime-local" name="end_time" id="end_time" required />
+
+        <br><br>
+        <button type="submit">Create Time Log</button>
+    </form>
+
+    <p><a href="{% url 'activity_detail' activity_id=activity.id %}">Back to {{ activity.name }}</a></p>
+</body>
+</html>
